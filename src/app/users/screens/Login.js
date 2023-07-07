@@ -16,8 +16,8 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const Login = props => {
   const {navigation} = props;
-  const [username, setUsername] = useState('abc');
-  const [password, setPassword] = useState('123');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleLogin = () => {
     if (username==="abc" && password=="123") {

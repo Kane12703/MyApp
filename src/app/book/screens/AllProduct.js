@@ -10,7 +10,9 @@ import {
 import styleAllProduct from '../../../themes/AllProductCss/styleAllProduct';
 import styleHome from '../../../themes/HomeCss/styleHome';
 import image, {product} from '../../../assets/contain/image';
-  const AllProduct =() => {
+import HeaderMain from '../../../utilities/HeaderMain/HeaderMain';
+  const AllProduct =(props) => {
+    const {navigation}=props;
   const [activeTab, setActiveTab] = useState(0);
   const renderItem = ({item}) => {
     const {name, chapter, sub, Imagee} = item;
@@ -61,7 +63,9 @@ import image, {product} from '../../../assets/contain/image';
   }, [activeTab]);
 
   return (
+   
     <View style={styleAllProduct.containerAllProduct}>
+       <HeaderMain navigation={navigation}/>
       <ScrollView
         style={styleAllProduct.tabList}
         horizontal

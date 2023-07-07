@@ -11,6 +11,7 @@ import styleHome from '../../../themes/HomeCss/styleHome';
 import image from '../../../assets/contain/image';
 import LinearGradient from 'react-native-linear-gradient';
 import {SpeedDial} from '@rneui/themed';
+import HeaderMain from '../../../utilities/HeaderMain/HeaderMain';
 
 const Home = props => {
   const {navigation} = props;
@@ -20,7 +21,7 @@ const Home = props => {
     const {name, author, Imagee} = item;
 
     return (
-      <TouchableOpacity style={styleHome.productTreding1}>
+      <TouchableOpacity style={styleHome.productTreding1} onPress={()=>navigation.navigate('Detail')}>
         <Image source={{uri: Imagee}} style={styleHome.imgProductTreding} />
         <Text style={styleHome.textName}>{name}</Text>
         <Text style={styleHome.author}>{author}</Text>
@@ -40,18 +41,7 @@ const Home = props => {
   };
   return (
     <View style={styleHome.container}>
-      <View style={styleHome.header}>
-        <View style={styleHome.user}>
-          <Image source={image.imgUser} style={styleHome.imgUser} />
-          <View style={styleHome.nameUser}>
-            <Text style={styleHome.describe}>Stay treding!</Text>
-            <Text style={styleHome.textName}>Kayza Kirito</Text>
-          </View>
-        </View>
-        <TouchableOpacity style={styleHome.setting}>
-          <Image source={image.iconSetting} style={styleHome.iconSetting} />
-        </TouchableOpacity>
-      </View>
+     <HeaderMain navigation={navigation} />
       <View style={styleHome.search}>
         <Image source={image.iconSearch} style={styleHome.iconSearch} />
         <TextInput
@@ -129,13 +119,13 @@ const Home = props => {
         color="#424242">
         <SpeedDial.Action
          color='white'
-          title="All"
+          title="Manga"
           onPress={() => navigation.navigate('AllProduct')}
         />
         <SpeedDial.Action
         color='white'
           // icon={{name: 'delete', color: 'white'}}
-          title="List"
+          title="Logout"
           onPress={() => navigation.navigate('Detail')}
         />
           <SpeedDial.Action
@@ -147,7 +137,7 @@ const Home = props => {
            <SpeedDial.Action
         color='white'
           // icon={{name: 'delete', color: 'white'}}
-          title=""
+          title="Setting"
           onPress={() => navigation.navigate('Detail')}
         />
         
@@ -167,7 +157,14 @@ var data = [
     name: 'Solo Leveling',
     author: 'Kane',
     Imagee:
-      'https://upload.wikimedia.org/wikipedia/vi/9/99/Solo_Leveling_Webtoon.png',
+      'https://techkalzen.com/wp-content/uploads/2020/07/solo-leveling-1.png',
+  },
+  {
+    _id: '63bfa809c4f47f0016aee205',
+    name: 'Solo Leveling',
+    author: 'Kane',
+    Imagee:
+      'https://i.ytimg.com/vi/GM_GFLsJ8sY/maxresdefault.jpg',
   },
   {
     _id: '63bfa809c4f47f0016aee205',
@@ -181,14 +178,7 @@ var data = [
     name: 'Solo Leveling',
     author: 'Kane',
     Imagee:
-      'https://upload.wikimedia.org/wikipedia/vi/9/99/Solo_Leveling_Webtoon.png',
-  },
-  {
-    _id: '63bfa809c4f47f0016aee205',
-    name: 'Solo Leveling',
-    author: 'Kane',
-    Imagee:
-      'https://upload.wikimedia.org/wikipedia/vi/9/99/Solo_Leveling_Webtoon.png',
+      'https://sg.cdnki.com/truyen-tranh-danh-nhau-han-quoc---aHR0cHM6Ly9pbWc1LnRodXRodWF0cGhhbm1lbS52bi91cGxvYWRzLzIwMjEvMDkvMjkvdG9wLTIwLW1hbmh3YS1oYXktbmhhdC1oaWVuLW5heS1raG9uZy10aGUtYm8tbG9fMDg0OTMxOTA5LmpwZw==.webp',
   },
 ];
 
@@ -196,36 +186,36 @@ var dataReader = [
   {
     nameReader: 'Melidos',
     imagee:
-      'https://thiepnhanai.com/wp-content/uploads/2021/05/hinh-anh-dai-dien-dep-1.jpg',
+      'https://thuthuatnhanh.com/wp-content/uploads/2018/07/anh-dai-dien-dep-652x580.jpg',
   },
   {
     nameReader: 'Melidos',
     imagee:
-      'https://thiepnhanai.com/wp-content/uploads/2021/05/hinh-anh-dai-dien-dep-1.jpg',
+      'https://i.pinimg.com/736x/59/18/d8/5918d8e9040516b65f93c75a9c5b8175.jpg',
   },
   {
     nameReader: 'Melidos',
     imagee:
-      'https://thiepnhanai.com/wp-content/uploads/2021/05/hinh-anh-dai-dien-dep-1.jpg',
+      'https://img2.thuthuatphanmem.vn/uploads/2018/11/30/anh-dai-dien-anime_104204770.jpg',
   },
   {
     nameReader: 'Melidos',
     imagee:
-      'https://thiepnhanai.com/wp-content/uploads/2021/05/hinh-anh-dai-dien-dep-1.jpg',
+      'https://i0.wp.com/thatnhucuocsong.com.vn/wp-content/uploads/2022/04/Anh-avatar-dep-anh-dai-dien-FB-Tiktok-Zalo.jpg?ssl=1',
   },
   {
     nameReader: 'Melidos',
     imagee:
-      'https://thiepnhanai.com/wp-content/uploads/2021/05/hinh-anh-dai-dien-dep-1.jpg',
+      'https://antimatter.vn/wp-content/uploads/2022/11/hinh-avatar-anime-nam-ngau.jpg',
   },
   {
     nameReader: 'Melidos',
     imagee:
-      'https://thiepnhanai.com/wp-content/uploads/2021/05/hinh-anh-dai-dien-dep-1.jpg',
+      'https://khoinguonsangtao.vn/wp-content/uploads/2022/07/hinh-anh-avatar-anime-boy-diu-dang.jpg',
   },
   {
     nameReader: 'Melidos',
     imagee:
-      'https://thiepnhanai.com/wp-content/uploads/2021/05/hinh-anh-dai-dien-dep-1.jpg',
-  },
+      'https://hanoitop10.com/wp-content/uploads/2023/02/anh-avatar-cute_1.jpg',
+    }
 ];

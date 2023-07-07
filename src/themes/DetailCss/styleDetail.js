@@ -6,21 +6,20 @@ import {color} from '@rneui/base';
 const styleDetail = StyleSheet.create({
   container: {
     flex: 1,
-    position: 'relative',
     padding: 0,
     margin: 0,
   },
   back: {
-    marginLeft: 16,
-    marginTop: 10,
+    position:'absolute',
+    top:10,
+    left:10,
   },
   iconBack: {
-    width: 7.2,
+    width: 8.2,
     height: 17.4,
-    backgroundColor: '#000',
   },
   nameProductHeader: {
-    width: '100%',
+
     textAlign: 'center',
     lineHeight: 30,
     fontSize: 20,
@@ -28,12 +27,13 @@ const styleDetail = StyleSheet.create({
     fontWeight: 600,
     color: Color.white2,
     position: 'absolute',
+    left:'35%',
     top: 10,
   },
   header: {
     width: '100%',
     height: 250,
-    position: 'relative',
+
   },
 
   categoryProduct: {
@@ -174,7 +174,7 @@ const styleDetail = StyleSheet.create({
     justifyContent: 'center',
     width: 44,
     height: 44,
-    backgroundColor: '#61BFAD',
+    backgroundColor: '#A2B2FC',
     borderRadius: 50,
   },
   chapter: {
@@ -227,7 +227,7 @@ const styleDetail = StyleSheet.create({
     marginTop: 10,
     width: 220,
     height: 50,
-    backgroundColor: '#61BFAD',
+    backgroundColor: '#A2B2FC',
     borderRadius: 10,
     marginRight: 20,
     justifyContent: 'center',

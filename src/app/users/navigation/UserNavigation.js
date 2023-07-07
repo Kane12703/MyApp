@@ -6,6 +6,7 @@ import Home from '../../book/screens/Home';
 import Detail from '../../book/screens/Detail';
 import AllProduct from '../../book/screens/AllProduct'
 import MyProfile from '../../book/screens/MyProfile';
+import HeaderMain from '../../../utilities/HeaderMain/HeaderMain';
 
 
 const Stack = createNativeStackNavigator();
@@ -22,6 +23,7 @@ const UserNavigation = () => {
       <Stack.Screen name="Detail" component={Detail} />
       <Stack.Screen name="AllProduct" component={AllProduct} />
       <Stack.Screen name="MyProfile" component={MyProfile} />
+      <Stack.Screen name="MangaAll" component={AllProduct} />
     </Stack.Navigator>
   );
 };

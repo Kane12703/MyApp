@@ -100,6 +100,7 @@ const styleMyProfile = StyleSheet.create({
     },
 
 //lisst product
+    
 
     imgProduct:{
         width: 140,
@@ -123,6 +124,7 @@ const styleMyProfile = StyleSheet.create({
     product:{
         flexDirection:'row',
         justifyContent:'space-around',
+        marginBottom:10,
     },
     infomationConainer:{
         width:'100%',
@@ -136,6 +138,7 @@ const styleMyProfile = StyleSheet.create({
         right: 0,
         bottom: 0,
       },
+  
     
    
 

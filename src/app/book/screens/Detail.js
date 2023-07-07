@@ -5,13 +5,16 @@ import {
   TouchableOpacity,
   ImageBackground,
   FlatList,
+  TouchableWithoutFeedback,
+  TouchableHighlight,
 } from 'react-native';
 import React, {useState} from 'react';
 import styleDetail from '../../../themes/DetailCss/styleDetail';
 import image from '../../../assets/contain/image';
 
-const Detail = () => {
-  const renderItem = ({item,index}) => {
+const Detail = props => {
+  const {goBack} = props.navigation;
+  const renderItem = ({item, index}) => {
     const {chapter, totalPage} = item;
     const itemNumber = index + 1;
 
@@ -25,8 +28,8 @@ const Detail = () => {
           </View>
         </View>
         <View style={styleDetail.openChapter}>
-            <Image style={styleDetail.iconBook} source={image.iconBook} />
-          </View>
+          <Image style={styleDetail.iconBook} source={image.iconBook} />
+        </View>
       </TouchableOpacity>
     );
   };
@@ -38,15 +41,15 @@ const Detail = () => {
 
   return (
     <View style={styleDetail.container}>
-      <ImageBackground source={image.backGround} style={styleDetail.header}>
-        <TouchableOpacity style={styleDetail.back}>
-          <Image source={image.iconBack} style={styleDetail.iconBack} />
-        </TouchableOpacity>
-        <Text style={styleDetail.nameProductHeader}>Solo Leveling</Text>
-        <View style={styleDetail.categoryProduct}>
-          <Text style={styleDetail.textCategoryProduct}>Manhwa</Text>
-        </View>
-      </ImageBackground>
+        <ImageBackground source={image.backGround} style={styleDetail.header}>
+          <TouchableOpacity style={styleDetail.back} onPress={() => goBack()}>
+            <Image source={image.iconBack} style={styleDetail.iconBack} />
+          </TouchableOpacity>
+          <Text style={styleDetail.nameProductHeader}>Solo Leveling</Text>
+          <View style={styleDetail.categoryProduct}>
+            <Text style={styleDetail.textCategoryProduct}>Manhwa</Text>
+          </View>
+        </ImageBackground>
       <View style={styleDetail.content}>
         <View style={styleDetail.informatitonProduct}>
           <View style={styleDetail.information}>
@@ -90,12 +93,12 @@ const Detail = () => {
         </View>
       </View>
       <View style={styleDetail.bottom}>
-         <TouchableOpacity style={styleDetail.evaluate}>
-            <Image source={image.iconNoStar} style={styleDetail.iconNoStar}/>
-         </TouchableOpacity>
-         <TouchableOpacity style={styleDetail.btnRead}>
-            <Text style={styleDetail.textRead}>Read Manga</Text>
-         </TouchableOpacity>
+        <TouchableOpacity style={styleDetail.evaluate}>
+          <Image source={image.iconNoStar} style={styleDetail.iconNoStar} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styleDetail.btnRead}>
+          <Text style={styleDetail.textRead}>Read Manga</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -104,67 +107,67 @@ const Detail = () => {
 export default Detail;
 var data = [
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'manhwa',
+    loai: 'manhwa',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'action',
+    loai: 'action',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },
   {
-    loai:'drama',
+    loai: 'drama',
     chapter: 'Chapter 1',
     totalPage: '30 Page',
   },

@@ -14,7 +14,9 @@ import Color from '../../../assets/contain/Color';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {BottomSheet, ListItem} from '@rneui/themed';
 
-const MyProfile = () => {
+const MyProfile = (props) => {
+  const{goBack}=props.navigation;
+
   const [isVisible, setIsVisible] = useState(false);
   const translateY = useRef(new Animated.Value(0)).current;
   const panResponder = PanResponder.create({
@@ -29,7 +31,7 @@ const MyProfile = () => {
         setIsVisible(false);
       } else {
         Animated.spring(translateY, {
-          toValue:0,
+          toValue: 0,
           useNativeDriver: true,
         }).start();
       }
@@ -80,10 +82,13 @@ const MyProfile = () => {
   return (
     <View style={styleMyProfile.myProfileContainer}>
       <View style={styleMyProfile.headerContainer}>
-        <Image style={styleMyProfile.iconBack} source={image.back}></Image>
+        <TouchableOpacity onPress={()=>goBack()}>
+          <Image style={styleMyProfile.iconBack} source={image.back}></Image>
+        </TouchableOpacity>
         <Text style={styleMyProfile.textHeader}>My Profile</Text>
         <TouchableOpacity
-          style={styleMyProfile.setting} onPress={handleSettingPress}>
+          style={styleMyProfile.setting}
+          onPress={handleSettingPress}>
           <Image style={styleMyProfile.iconDots} source={image.iconDot}></Image>
           <Image style={styleMyProfile.iconDots} source={image.iconDot}></Image>
           <Image style={styleMyProfile.iconDots} source={image.iconDot}></Image>
@@ -159,32 +164,32 @@ var data = [
   {
     _id: '63bfa809c4f47f0016aee205',
     name: 'Solo Leveling',
-    hinh: 'https://upload.wikimedia.org/wikipedia/vi/9/99/Solo_Leveling_Webtoon.png',
+    hinh: 'https://techkalzen.com/wp-content/uploads/2020/07/solo-leveling-1.png',
   },
   {
     _id: '63bfa809c4f47f0016aee205',
     name: 'Solo Leveling',
-    hinh: 'https://upload.wikimedia.org/wikipedia/vi/9/99/Solo_Leveling_Webtoon.png',
+    hinh: 'https://techkalzen.com/wp-content/uploads/2020/07/solo-leveling-1.png',
   },
   {
     _id: '63bfa809c4f47f0016aee205',
     name: 'Solo Leveling',
-    hinh: 'https://upload.wikimedia.org/wikipedia/vi/9/99/Solo_Leveling_Webtoon.png',
+    hinh: 'https://techkalzen.com/wp-content/uploads/2020/07/solo-leveling-1.png',
   },
   {
     _id: '63bfa809c4f47f0016aee205',
     name: 'Solo Leveling',
-    hinh: 'https://upload.wikimedia.org/wikipedia/vi/9/99/Solo_Leveling_Webtoon.png',
+    hinh: 'https://techkalzen.com/wp-content/uploads/2020/07/solo-leveling-1.png',
   },
   {
     _id: '63bfa809c4f47f0016aee205',
     name: 'Solo Leveling',
-    hinh: 'https://upload.wikimedia.org/wikipedia/vi/9/99/Solo_Leveling_Webtoon.png',
+    hinh: 'https://techkalzen.com/wp-content/uploads/2020/07/solo-leveling-1.png',
   },
   {
     _id: '63bfa809c4f47f0016aee205',
     name: 'Solo Leveling',
-    hinh: 'https://upload.wikimedia.org/wikipedia/vi/9/99/Solo_Leveling_Webtoon.png',
+    hinh: 'https://techkalzen.com/wp-content/uploads/2020/07/solo-leveling-1.png',
   },
 ];
 

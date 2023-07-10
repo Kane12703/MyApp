@@ -4,10 +4,11 @@ import Login from '../screens/Login';
 import Register from '../screens/Register';
 import Home from '../../book/screens/Home';
 import Detail from '../../book/screens/Detail';
-import AllProduct from '../../book/screens/AllProduct'
+import AllProduct from '../../book/screens/AllProduct';
 import MyProfile from '../../book/screens/MyProfile';
 import HeaderMain from '../../../utilities/HeaderMain/HeaderMain';
-
+import WelcomeScreen from '../screens/WellcomeScreen';
+import DetailsReader from '../../book/screens/DetailsReader';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ const UserNavigation = () => {
       screenOptions={{
         headerShown: false,
       }}>
+      <Stack.Screen name="Hello" component={WelcomeScreen} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Home" component={Home} />
@@ -24,6 +26,7 @@ const UserNavigation = () => {
       <Stack.Screen name="AllProduct" component={AllProduct} />
       <Stack.Screen name="MyProfile" component={MyProfile} />
       <Stack.Screen name="MangaAll" component={AllProduct} />
+      <Stack.Screen name="DetailsReader" component={DetailsReader} />
     </Stack.Navigator>
   );
 };

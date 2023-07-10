@@ -33,7 +33,7 @@ const Home = props => {
     const {nameReader, imagee} = item;
 
     return (
-      <TouchableOpacity style={styleHome.userTopReader}>
+      <TouchableOpacity style={styleHome.userTopReader} onPress={()=>navigation.navigate('DetailsReader')}>
         <Image style={styleHome.imgUserTopReader} source={{uri: imagee}} />
         <Text style={styleHome.textUserTopReader}>{nameReader}</Text>
       </TouchableOpacity>
@@ -138,7 +138,7 @@ const Home = props => {
         color='white'
           // icon={{name: 'delete', color: 'white'}}
           title="Setting"
-          onPress={() => navigation.navigate('Detail')}
+          onPress={() => navigation.navigate('Hello')}
         />
         
         

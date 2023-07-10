@@ -117,7 +117,7 @@ const styleMyProfile = StyleSheet.create({
         position:'absolute',
         height:400,
         width:'100%',
-        bottom:20,
+        bottom:10,
 
     
     },
@@ -137,6 +137,23 @@ const styleMyProfile = StyleSheet.create({
         left: 0,
         right: 0,
         bottom: 0,
+      },
+
+      // bottom follow
+      btnFollowed:{
+        width:'100%',
+        height:40,
+        backgroundColor:Color.primaryBlack,
+        borderRadius:25,
+        alignItems:'center',
+        justifyContent:'center',
+      },
+
+      textBtnFollowed:{
+        color:Color.white,
+        fontSize:16,
+        lineHeight:18.38,
+        fontWeight:400,
       },
   
     

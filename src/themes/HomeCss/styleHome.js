@@ -3,10 +3,10 @@ import Color from '../../assets/contain/Color';
 
 const styleHome = StyleSheet.create({
   container: {
-    position:'relative',
+    position: 'relative',
     flex: 1,
     alignItems: 'center',
-    backgroundLinearGradient: '90deg, #ff0000 40%, #00ff00 60%',
+    backgroundColor: '#000',
   },
   header: {
     marginTop: 20,
@@ -125,120 +125,114 @@ const styleHome = StyleSheet.create({
     color: Color.secondaryGray,
   },
 
- 
   //read
-  read:{
-    position:'absolute',
-    width:'100%',
-    height:340,
-    bottom:0,
-    borderTopRightRadius:30,
-    borderTopLeftRadius:30,
+  read: {
+    position: 'absolute',
+    width: '100%',
+    height: 340,
+    bottom: 0,
+    borderTopRightRadius: 30,
+    borderTopLeftRadius: 30,
   },
-  topReaders:{
-    marginHorizontal:30,
-    flexDirection:'row',
-    justifyContent:'space-between',
-    alignItems:'center',
-    marginTop:30,
+  topReaders: {
+    marginHorizontal: 30,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 30,
   },
-  textTopReader:{
-    fontStyle:'normal',
-    fontSize:18,
-    lineHeight:21,
-    color:Color.white,
-    fontWeight:500,
-  },
-
-  imgUserTopReader:{
-    height:60,
-    width:60,
-    borderRadius:30,
-    borderWidth:2,
-    borderColor:Color.white,
-  },
-  textUserTopReader:{
-    fontSize:12,
-    fontStyle:'normal',
-    color:Color.white,
-    fontWeight:400,
-
-  },
-  userTopReader:{
-    marginLeft:30,
-    alignItems:'center',
-  },
-  informationTopReader:{
-    marginTop:15,
+  textTopReader: {
+    fontStyle: 'normal',
+    fontSize: 18,
+    lineHeight: 21,
+    color: Color.white,
+    fontWeight: 500,
   },
 
-  continueRead:{
-    width:'100%',
-    backgroundColor:Color.main,
-    position:'absolute',
-    bottom:0,
-    height:170,
-    borderTopLeftRadius:25,
-    borderTopRightRadius:25,
+  imgUserTopReader: {
+    height: 60,
+    width: 60,
+    borderRadius: 30,
+    borderWidth: 2,
+    borderColor: Color.white,
   },
-  textContinueRead:{
-    marginTop:20,
-    fontSize:18,
-    fontWeight:'500',
-    fontStyle:'normal',
-    color:Color.white,
-    lineHeight:18,
-    marginLeft:30,
+  textUserTopReader: {
+    fontSize: 12,
+    fontStyle: 'normal',
+    color: Color.white,
+    fontWeight: 400,
   },
-  imgContinue:{
-    height:50,
-    width:50,
-    borderRadius:50,
+  userTopReader: {
+    marginLeft: 30,
+    alignItems: 'center',
+  },
+  informationTopReader: {
+    marginTop: 15,
+  },
 
+  continueRead: {
+    width: '100%',
+    backgroundColor: Color.main,
+    position: 'absolute',
+    bottom: 0,
+    height: 170,
+    borderTopLeftRadius: 25,
+    borderTopRightRadius: 25,
   },
-  iconContinue:{
-    height:20,
-    width:20,
-
+  textContinueRead: {
+    marginTop: 20,
+    fontSize: 18,
+    fontWeight: '500',
+    fontStyle: 'normal',
+    color: Color.white,
+    lineHeight: 18,
+    marginLeft: 30,
   },
-  btnContinue:{
-    marginTop:10,
-    flexDirection:'row',
-    width:300,
-    height:75,
-    backgroundColor:Color.white,
-    alignItems:'center',
-    justifyContent:'space-between',
-    paddingHorizontal:10,
-    borderRadius:60,
-    marginHorizontal:30,
+  imgContinue: {
+    height: 50,
+    width: 50,
+    borderRadius: 50,
   },
-  informationContinue:{
-    flexDirection:'row',
-    alignItems:'center',
-
-    
+  iconContinue: {
+    height: 20,
+    width: 20,
   },
-  nameContine:{
-    fontSize:12,
-    lineHeight:14,
-    fontStyle:'normal',
-    fontWeight:'400',
-    color:Color.primaryBlack,
-    marginBottom:10,
+  btnContinue: {
+    marginTop: 10,
+    flexDirection: 'row',
+    width: 300,
+    height: 75,
+    backgroundColor: Color.white,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+    borderRadius: 60,
+    marginHorizontal: 30,
   },
-  chapterContiue:{
-    fontSize:12,
-    lineHeight:14,
-    fontStyle:'normal',
-    color:Color.primaryBlack,
+  informationContinue: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  informationMangaContinue:{
-    paddingLeft:10,
+  nameContine: {
+    fontSize: 12,
+    lineHeight: 14,
+    fontStyle: 'normal',
+    fontWeight: '400',
+    color: Color.primaryBlack,
+    marginBottom: 10,
   },
-  iconSettingTest:{
-    height:45,
-    width:45,
+  chapterContiue: {
+    fontSize: 12,
+    lineHeight: 14,
+    fontStyle: 'normal',
+    color: Color.primaryBlack,
+  },
+  informationMangaContinue: {
+    paddingLeft: 10,
+  },
+  iconSettingTest: {
+    height: 45,
+    width: 45,
   },
 });
 export default styleHome;

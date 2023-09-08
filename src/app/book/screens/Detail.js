@@ -12,14 +12,14 @@ import React, {useState} from 'react';
 import styleDetail from '../../../themes/DetailCss/styleDetail';
 import image from '../../../assets/contain/image';
 
-const Detail = props => {
-  const {goBack} = props.navigation;
+const Detail = (props) => {
+  const {navigation}=props;
   const renderItem = ({item, index}) => {
     const {chapter, totalPage} = item;
     const itemNumber = index + 1;
 
     return (
-      <TouchableOpacity style={styleDetail.chapter}>
+      <TouchableOpacity style={styleDetail.chapter} onPress={()=>navigation.navigate('Chapter')}>
         <View style={styleDetail.chapterNumber}>
           <Text style={styleDetail.stt}>{itemNumber}</Text>
           <View style={styleDetail.informatitonChapter}>
@@ -42,7 +42,7 @@ const Detail = props => {
   return (
     <View style={styleDetail.container}>
         <ImageBackground source={image.backGround} style={styleDetail.header}>
-          <TouchableOpacity style={styleDetail.back} onPress={() => goBack()}>
+          <TouchableOpacity style={styleDetail.back} onPress={()=>navigation.navigate('Home')}>
             <Image source={image.iconBack} style={styleDetail.iconBack} />
           </TouchableOpacity>
           <Text style={styleDetail.nameProductHeader}>Solo Leveling</Text>

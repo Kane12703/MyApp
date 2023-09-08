@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -9,16 +9,16 @@ import {
 } from 'react-native';
 import styleAllProduct from '../../../themes/AllProductCss/styleAllProduct';
 import styleHome from '../../../themes/HomeCss/styleHome';
-import image, {product} from '../../../assets/contain/image';
+import image, { product } from '../../../assets/contain/image';
 import HeaderMain from '../../../utilities/HeaderMain/HeaderMain';
-  const AllProduct =(props) => {
-    const {navigation}=props;
+const AllProduct = props => {
+  const { navigation } = props;
   const [activeTab, setActiveTab] = useState(0);
-  const renderItem = ({item}) => {
-    const {name, chapter, sub, Imagee} = item;
+  const renderItem = ({ item }) => {
+    const { name, chapter, sub, Imagee } = item;
     return (
       <TouchableOpacity style={styleAllProduct.infomationProduct}>
-        <Image source={{uri: Imagee}} style={styleAllProduct.imgProduct} />
+        <Image source={{ uri: Imagee }} style={styleAllProduct.imgProduct} />
         <Text style={styleAllProduct.nameProduct}>{name}</Text>
         <View style={styleAllProduct.infomationChapter}>
           <Text style={styleAllProduct.sub}>{sub}</Text>
@@ -63,9 +63,8 @@ import HeaderMain from '../../../utilities/HeaderMain/HeaderMain';
   }, [activeTab]);
 
   return (
-   
     <View style={styleAllProduct.containerAllProduct}>
-       <HeaderMain navigation={navigation}/>
+      <HeaderMain navigation={navigation} />
       <ScrollView
         style={styleAllProduct.tabList}
         horizontal
@@ -88,7 +87,7 @@ import HeaderMain from '../../../utilities/HeaderMain/HeaderMain';
         <FlatList
           data={filteredData}
           renderItem={renderItem}
-          keyExtractor={(item, index) => index.toString()} 
+          keyExtractor={(item, index) => index.toString()}
           showsVerticalScrollIndicator={false}
         />
       </View>

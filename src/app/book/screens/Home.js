@@ -21,7 +21,9 @@ const Home = props => {
     const {name, author, Imagee} = item;
 
     return (
-      <TouchableOpacity style={styleHome.productTreding1} onPress={()=>navigation.navigate('Detail')}>
+      <TouchableOpacity
+        style={styleHome.productTreding1}
+        onPress={() => navigation.navigate('Detail')}>
         <Image source={{uri: Imagee}} style={styleHome.imgProductTreding} />
         <Text style={styleHome.textName}>{name}</Text>
         <Text style={styleHome.author}>{author}</Text>
@@ -33,7 +35,9 @@ const Home = props => {
     const {nameReader, imagee} = item;
 
     return (
-      <TouchableOpacity style={styleHome.userTopReader} onPress={()=>navigation.navigate('DetailsReader')}>
+      <TouchableOpacity
+        style={styleHome.userTopReader}
+        onPress={() => navigation.navigate('DetailsReader')}>
         <Image style={styleHome.imgUserTopReader} source={{uri: imagee}} />
         <Text style={styleHome.textUserTopReader}>{nameReader}</Text>
       </TouchableOpacity>
@@ -41,7 +45,7 @@ const Home = props => {
   };
   return (
     <View style={styleHome.container}>
-     <HeaderMain navigation={navigation} />
+      <HeaderMain navigation={navigation} />
       <View style={styleHome.search}>
         <Image source={image.iconSearch} style={styleHome.iconSearch} />
         <TextInput
@@ -118,32 +122,28 @@ const Home = props => {
         onClose={() => setOpen(!open)}
         color="#424242">
         <SpeedDial.Action
-         color='white'
+          color="white"
           title="Manga"
           onPress={() => navigation.navigate('AllProduct')}
         />
         <SpeedDial.Action
-        color='white'
+          color="white"
           // icon={{name: 'delete', color: 'white'}}
           title="Logout"
           onPress={() => navigation.navigate('Detail')}
         />
-          <SpeedDial.Action
-        color='white'
+        <SpeedDial.Action
+          color="white"
           // icon={{name: 'delete', color: 'white'}}
           title="Profile"
           onPress={() => navigation.navigate('MyProfile')}
         />
-           <SpeedDial.Action
-        color='white'
+        <SpeedDial.Action
+          color="white"
           // icon={{name: 'delete', color: 'white'}}
           title="Setting"
           onPress={() => navigation.navigate('Hello')}
         />
-        
-        
-
-  
       </SpeedDial>
     </View>
   );
@@ -163,8 +163,7 @@ var data = [
     _id: '63bfa809c4f47f0016aee205',
     name: 'Solo Leveling',
     author: 'Kane',
-    Imagee:
-      'https://i.ytimg.com/vi/GM_GFLsJ8sY/maxresdefault.jpg',
+    Imagee: 'https://i.ytimg.com/vi/GM_GFLsJ8sY/maxresdefault.jpg',
   },
   {
     _id: '63bfa809c4f47f0016aee205',
@@ -217,5 +216,5 @@ var dataReader = [
     nameReader: 'Melidos',
     imagee:
       'https://hanoitop10.com/wp-content/uploads/2023/02/anh-avatar-cute_1.jpg',
-    }
+  },
 ];

@@ -19,7 +19,7 @@ export const iconBook = require("../image/detail/iconBook.png");
 export const iconNoStar = require("../image/detail/nonStar.png");
 export const back = require("../image/myProfile/back.png");
 export const wellcome = require("../image/login/wellcome.jpg");
-
+export const imgChapter1=require("../image/chapter/imgCha1.jpg");
 
 
 
@@ -46,6 +46,7 @@ export default {
     iconBook,
     iconNoStar,
     back,
-    wellcome
+    wellcome,
+    imgChapter1,
 
 }

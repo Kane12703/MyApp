@@ -9,7 +9,7 @@ import MyProfile from '../../book/screens/MyProfile';
 import HeaderMain from '../../../utilities/HeaderMain/HeaderMain';
 import WelcomeScreen from '../screens/WellcomeScreen';
 import DetailsReader from '../../book/screens/DetailsReader';
-
+import Chapter from '../../book/screens/Chapter';
 const Stack = createNativeStackNavigator();
 
 const UserNavigation = () => {
@@ -27,6 +27,7 @@ const UserNavigation = () => {
       <Stack.Screen name="MyProfile" component={MyProfile} />
       <Stack.Screen name="MangaAll" component={AllProduct} />
       <Stack.Screen name="DetailsReader" component={DetailsReader} />
+      <Stack.Screen name="Chapter" component={Chapter} />
     </Stack.Navigator>
   );
 };

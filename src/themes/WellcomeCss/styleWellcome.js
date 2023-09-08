@@ -14,6 +14,7 @@ const styleWellcome = StyleSheet.create({
       },
       imgWellcome:{
         flex:1,
+        
       },
       textWecome:{
         position:'absolute',
